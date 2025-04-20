@@ -33,7 +33,7 @@ class RegistrationController extends Controller
             'email_confirmation' => ['required'],
             'phone_number' => ['required'],
             'performance_type' => ['required'],
-            'performance_name' => ['required'],
+            'performance_title' => ['required'],
             'performance_minute' => ['required'],
             'music_type' => ['required'],
             'performance_number' => ['required'],

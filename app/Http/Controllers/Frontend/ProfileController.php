@@ -12,7 +12,7 @@ class ProfileController extends Controller
     public function index()
     {
         $title = 'Profile';
-        $items = RegistrationEvent::where('status', 1)->where('user_id', auth()->user()->id)->latest()->get();
+        $items = RegistrationEvent::where('status', 2)->where('user_id', auth()->user()->id)->latest()->get();
         return view('frontend.pages.profile.index', compact('title', 'items'));
     }
 

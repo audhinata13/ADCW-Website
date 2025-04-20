@@ -32,7 +32,7 @@ class RegistrationEventController extends Controller
         $status = request('status');
         $item = RegistrationEvent::findOrFail($id);
 
-        if ($status == 2) {
+        if ($status == 1) {
             $data_notification = [
                 'title' => $item->event->name . ' Payment Infomation',
                 'description' => 'Your registration has been aproved. You can now continue to payment.',
@@ -41,7 +41,7 @@ class RegistrationEventController extends Controller
                 'type' => 'payment'
             ];
             Notification::create($data_notification);
-        } elseif ($status == 1) {
+        } elseif ($status == 2) {
             $data_notification = [
                 'title' => $item->event->name,
                 'description' => 'Thankyou for payment. You can now see your E-Ticket on your profile.',

@@ -234,12 +234,12 @@
                 </div>
                 <div class="flex flex-row gap-2 mb-4">
                     <div class="w-1/2">
-                        <label for="performance_name"
+                        <label for="performance_title"
                             class="block mb-2 text-sm font-medium text-white dark:text-white">Name/Title of
                             Performance</label>
-                        <input type="text" id="performance_name" name="performance_name"
+                        <input type="text" id="performance_title" name="performance_title"
                             class="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" />
-                        @error('performance_name')
+                        @error('performance_title')
                             <p class="text-red-400 text-xs mt-3">{{ $message }}</p>
                         @enderror
                     </div>
@@ -299,7 +299,7 @@
                             <h2 class="text-white text-lg mb-3 font-normal">Event Details</h2>
                             <div class="flex gap-4 py-2">
                                 <div>
-                                    <img src="{{ asset('assets/img/example-image.jpg') }}"
+                                    <img src="{{ $event->image() }}"
                                         class="h-13 border-2 object-cover w-full" alt="">
                                 </div>
                                 <div>
