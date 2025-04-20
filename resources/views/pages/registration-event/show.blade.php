@@ -293,8 +293,7 @@
                                     {!! $item->status() !!}
                                 </div>
                             </div>
-                            @if ($item->status)
-                                <div class="row">
+                            <div class="row">
                                     <div class="col-12">
                                         <a href="{{ route('registration-events.update-status', [
                                             'id' => $item->id,
@@ -319,7 +318,6 @@
                                         </a>
                                     </div>
                                 </div>
-                            @endif
                         </div>
                     </div>
                 </x-slot>
